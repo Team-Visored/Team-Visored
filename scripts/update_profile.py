@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh only the CTFtime section of the Team Visored profile README."""
+"""Refresh CTFtime rankings, results, and members in the profile README."""
 
 import argparse
 from datetime import datetime, timezone
@@ -8,7 +8,7 @@ from html import escape, unescape
 import json
 from pathlib import Path
 import sys
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin, urlsplit
 from urllib.request import Request, urlopen
 
 
@@ -21,6 +21,7 @@ SOURCES = (
 )
 TEAM_URL = "https://ctftime.org/team/447690"
 ARCHIVE_URL = "https://team-visored.vercel.app/achievements.html"
+WEBSITE_URL = "https://team-visored.vercel.app/"
 
 
 def number(value):
@@ -58,9 +59,12 @@ def validate(payload):
         raise ValueError("The snapshot belongs to a different team")
     if not positive_int(payload.get("season")) or not isinstance(payload.get("ranking"), dict):
         raise ValueError("Season or ranking data is missing")
-    for key in ("results", "upcoming"):
+    for key in ("results", "upcoming", "members"):
         if not isinstance(payload.get(key), list) or not all(isinstance(row, dict) for row in payload[key]):
             raise ValueError(f"Invalid {key} data")
+    for member in payload["members"]:
+        if not positive_int(member.get("id")) or not isinstance(member.get("name"), str) or not member["name"].strip():
+            raise ValueError("A member is missing a valid CTFtime ID or username")
     if not isinstance(payload.get("summary"), dict):
         raise ValueError("Summary data is missing")
     datetime.fromisoformat(payload["synced_at"].replace("Z", "+00:00"))
@@ -106,10 +110,72 @@ def badge(label, value, color, destination):
     return f'  <a href="{destination}"><img src="{image}" alt="{alt}" /></a>'
 
 
+def public_url(value, image=False):
+    if not isinstance(value, str):
+        return None
+    value = unescape(value.strip())
+    if image and value.startswith("assets/"):
+        value = urljoin(WEBSITE_URL, value)
+    try:
+        parsed = urlsplit(value)
+        if parsed.scheme in ("https", "http") and parsed.hostname and not parsed.username and not parsed.password:
+            return value
+    except ValueError:
+        pass
+    return None
+
+
+def team_members(payload):
+    """Use CTFtime IDs to deduplicate linked profiles and track renamed users."""
+    unique = {}
+    for member in payload["members"]:
+        uid = positive_int(member["id"])
+        saved = unique.get(uid)
+        if saved is None or (saved.get("_stale") and not member.get("_stale")):
+            unique[uid] = member
+    return sorted(unique.values(), key=lambda member: (member["name"].casefold(), positive_int(member["id"])))
+
+
+def render_members(members):
+    lines = ["## ◈ Behind the visor", ""]
+    if not members:
+        return "\n".join(lines + ["No public members are currently listed in the CTFtime feed."])
+    lines += ["<p align=\"center\">", "  <sub>Names, portraits, specialties, and public profile links follow our CTFtime roster.</sub>", "</p>", "", '<table align="center">']
+    columns = min(4, len(members))
+    for offset in range(0, len(members), columns):
+        lines.append("  <tr>")
+        row = members[offset:offset + columns]
+        for member in row:
+            uid = positive_int(member["id"])
+            profile = f"https://ctftime.org/user/{uid}/"
+            name = text(member["name"])
+            avatar = public_url(member.get("avatar_img"), image=True) or urljoin(WEBSITE_URL, "assets/team-logo.png")
+            skills = member.get("specialization")
+            skills = list(dict.fromkeys(skill.strip() for skill in skills if isinstance(skill, str) and skill.strip())) if isinstance(skills, list) else []
+            focus = "<br />".join(text(skill) for skill in skills) if skills else text(member.get("role") or "CTF Operator")
+            lines += [
+                f'    <td align="center" valign="top" width="{100 // columns}%">',
+                f'      <a href="{profile}"><img src="{escape(avatar, quote=True)}" width="72" height="72" alt="{name}" /><br /><strong>{name}</strong></a>',
+                f"      <br /><sub>{focus}</sub>",
+                f'      <br /><br /><a href="{profile}"><sub>CTFtime ↗</sub></a>',
+            ]
+            portfolio = public_url(member.get("portfolio_url"))
+            if portfolio:
+                lines.append(f'      · <a href="{escape(portfolio, quote=True)}"><sub>Portfolio ↗</sub></a>')
+            if member.get("_stale"):
+                lines.append("      <br /><sub>Profile refresh pending</sub>")
+            lines.append("    </td>")
+        lines += ["    <td></td>"] * (columns - len(row))
+        lines.append("  </tr>")
+    lines.append("</table>")
+    return "\n".join(lines)
+
+
 def render(payload):
     validate(payload)
     ranking = payload["ranking"]
     results = top_results(payload)
+    members = team_members(payload)
     best = results[0]["place"] if results else None
     badges = [
         badge("NEPAL", rank(ranking.get("country_place")), "A8C8FF", TEAM_URL),
@@ -119,8 +185,9 @@ def render(payload):
         badge("CTF FINISHES", len({row.get("event_id") for row in payload["results"]}), "67E8F9", ARCHIVE_URL),
         badge("RATING", formatted(ranking.get("rating_points"), 3), "A8C8FF", TEAM_URL),
         badge("PLANNED EVENTS", len({row.get("event_id") for row in payload["upcoming"]}), "818CF8", "https://team-visored.vercel.app/upcoming.html"),
+        badge("MEMBERS", len(members), "C4B5FD", TEAM_URL),
     ]
-    lines = ["<p align=\"center\">", *badges[:3], "</p>", "", "<p align=\"center\">", *badges[3:], "</p>", "", "### Five strongest finishes", ""]
+    lines = ["<p align=\"center\">", *badges[:3], "</p>", "", "<p align=\"center\">", *badges[3:6], "</p>", "", "<p align=\"center\">", *badges[6:], "</p>", "", "### Five strongest finishes", ""]
     if results:
         lines += ["| Record | Event | Global finish | CTF score | Rating points |", "|:------:|:------|:-------------:|----------:|--------------:|"]
         for index, row in enumerate(results, 1):
@@ -129,11 +196,18 @@ def render(payload):
             lines.append(f"| **{index:02}** | [{title}]({event_url}) | **{rank(row['place'])}** | {formatted(row.get('points'), 2)} | {formatted(row.get('rating_points'), 3)} |")
     else:
         lines.append("No ranked finishes have been published for this season yet.")
+    lines += [
+        "", '<p align="center">',
+        f'  <a href="{ARCHIVE_URL}"><strong>Explore the full archive ↗</strong></a>',
+        "  &nbsp; · &nbsp;",
+        f'  <a href="{WEBSITE_URL}upcoming.html"><strong>See upcoming challenges ↗</strong></a>',
+        "</p>", "", render_members(members),
+    ]
     stamp = datetime.fromisoformat(payload["synced_at"].replace("Z", "+00:00"))
     if stamp.tzinfo is None:
         stamp = stamp.replace(tzinfo=timezone.utc)
     source_date = stamp.astimezone(timezone.utc).strftime("%d %b %Y")
-    lines += ["", "<p align=\"center\">", f"  <sub>Source snapshot: {source_date} (UTC). Rankings and results synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>", "</p>"]
+    lines += ["", "<p align=\"center\">", f"  <sub>Source snapshot: {source_date} (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>", "</p>"]
     if payload.get("_sync", {}).get("status") == "partial":
         lines += ["", "<p align=\"center\"><sub>Some source data is temporarily unavailable; the feed retains its last available records.</sub></p>"]
     return "\n".join(lines)
@@ -150,7 +224,7 @@ def update_readme(path, payload):
         print("No public stats changed; README is already up to date")
         return False
     path.write_text(updated, encoding="utf-8")
-    print(f"Updated {path} with the five strongest CTFtime finishes")
+    print(f"Updated {path} with CTFtime stats, top-five finishes, and members")
     return True
 
 

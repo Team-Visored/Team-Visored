@@ -9,9 +9,11 @@ Put these files in your public `Team-Visored/Team-Visored` repository, preservin
 
 The workflow runs on the repository's default branch after uploading the files, on a schedule every 15 minutes, and when you select **Actions → Update CTFtime profile → Run workflow**. No personal access token or Python packages are required. The workflow uses the repository's built-in GitHub token with permission to update its README.
 
-The updater refreshes Nepal rank, worldwide rank, season, best finish, total finishes, official season rating, planned-event count, and the five strongest placements with event links, scores, and rating points. It ranks finishes by lowest placement, then highest score, and removes duplicate events.
+The updater refreshes Nepal rank, worldwide rank, season, best finish, total finishes, official season rating, planned-event count, member count, and the five strongest placements with event links, scores, and rating points. It ranks finishes by lowest placement, then highest score, and removes duplicate events.
 
-The live website endpoint is tried first, followed by its saved snapshot. If both fail or return invalid data, the job fails without changing the saved README. The rest of the README, including the Spydomain credit, stays outside the generated section.
+The member grid follows the website feed's public CTFtime roster, including its linked team profiles. New members appear, removed members disappear, and username changes, portraits, specialties, and available portfolio links update on the next successful refresh. Members are deduplicated by CTFtime user ID, sorted by username, and linked to their official CTFtime profiles. Missing portraits use the team crest. The Spydomain management credit stays in the footer.
+
+The live website endpoint is tried first, followed by its saved snapshot. If both fail or return invalid data, including a missing or malformed roster, the job fails without changing the saved README. If the feed retains a cached member profile during a partial upstream outage, the member card identifies that its profile refresh is pending. The rest of the README, including the Spydomain credit, stays outside the generated section.
 
 The source date is shown without a time so identical stats do not generate a new commit every 15 minutes. A new snapshot date can still produce one daily update. The displayed results describe the current season, matching the website feed; a new season with no ranked results displays an empty-season message.
 

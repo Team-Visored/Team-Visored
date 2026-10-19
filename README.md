@@ -50,7 +50,11 @@ We follow the weird request, the loose permission, and the line of code that doe
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=BEST+FINISH&amp;message=%234&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="BEST FINISH: #4" /></a>
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=17&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 17" /></a>
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=191.680&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 191.680" /></a>
+</p>
+
+<p align="center">
   <a href="https://team-visored.vercel.app/upcoming.html"><img src="https://img.shields.io/static/v1?label=PLANNED+EVENTS&amp;message=9&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="PLANNED EVENTS: 9" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=MEMBERS&amp;message=7&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="MEMBERS: 7" /></a>
 </p>
 
 ### Five strongest finishes
@@ -64,16 +68,67 @@ We follow the weird request, the loose permission, and the line of code that doe
 | **05** | [FortID CTF 2026](https://ctftime.org/event/3440/) | **#52** | 2,860.00 | 23.078 |
 
 <p align="center">
-  <sub>Source snapshot: 19 Oct 2026 (UTC). Rankings and results synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
-</p>
-
-<!-- CTFTIME:END -->
-
-<p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><strong>Explore the full archive ↗</strong></a>
   &nbsp; · &nbsp;
   <a href="https://team-visored.vercel.app/upcoming.html"><strong>See upcoming challenges ↗</strong></a>
 </p>
+
+## ◈ Behind the visor
+
+<p align="center">
+  <sub>Names, portraits, specialties, and public profile links follow our CTFtime roster.</sub>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/272391/"><img src="https://ctftime.org/media/cache/cd/5c/cd5c6cd9880b229ba96ad53c4e47eba1.jpg" width="72" height="72" alt="hellospyder" /><br /><strong>hellospyder</strong></a>
+      <br /><sub>Miscellaneous CTF Solves<br />Web Application Security<br />Cryptography &amp; Cryptanalysis<br />Digital Forensics &amp; Incident Response</sub>
+      <br /><br /><a href="https://ctftime.org/user/272391/"><sub>CTFtime ↗</sub></a>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/273625/"><img src="https://team-visored.vercel.app/assets/team-logo.png" width="72" height="72" alt="ItsPratyh" /><br /><strong>ItsPratyh</strong></a>
+      <br /><sub>OSINT &amp; Threat Intelligence<br />Digital Forensics &amp; Incident Response</sub>
+      <br /><br /><a href="https://ctftime.org/user/273625/"><sub>CTFtime ↗</sub></a>
+      · <a href="https://pratyush-929.github.io/PortFolio/"><sub>Portfolio ↗</sub></a>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/269092/"><img src="https://ctftime.org/media/cache/74/0e/740ea63660e16233352b344e95d40946.jpg" width="72" height="72" alt="MonsterDuckky" /><br /><strong>MonsterDuckky</strong></a>
+      <br /><sub>Web Application Security<br />OSINT &amp; Threat Intelligence</sub>
+      <br /><br /><a href="https://ctftime.org/user/269092/"><sub>CTFtime ↗</sub></a>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/229270/"><img src="https://team-visored.vercel.app/assets/team-logo.png" width="72" height="72" alt="SAM@1337&#95;" /><br /><strong>SAM@1337&#95;</strong></a>
+      <br /><sub>CTF Operator</sub>
+      <br /><br /><a href="https://ctftime.org/user/229270/"><sub>CTFtime ↗</sub></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/273012/"><img src="https://team-visored.vercel.app/assets/team-logo.png" width="72" height="72" alt="Skai" /><br /><strong>Skai</strong></a>
+      <br /><sub>CTF Operator</sub>
+      <br /><br /><a href="https://ctftime.org/user/273012/"><sub>CTFtime ↗</sub></a>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/272387/"><img src="https://ctftime.org/media/cache/d9/de/d9de57feb57bb58724a547e143498d81.jpg" width="72" height="72" alt="Spydomain" /><br /><strong>Spydomain</strong></a>
+      <br /><sub>Web Application Security<br />Cryptography &amp; Cryptanalysis<br />Digital Forensics &amp; Incident Response</sub>
+      <br /><br /><a href="https://ctftime.org/user/272387/"><sub>CTFtime ↗</sub></a>
+      · <a href="https://bikashkumarsarraf.com.np"><sub>Portfolio ↗</sub></a>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <a href="https://ctftime.org/user/263324/"><img src="https://ctftime.org/media/cache/1c/f6/1cf68f23195a87700bee8cc458f033df.jpg" width="72" height="72" alt="yixuan1112-coder" /><br /><strong>yixuan1112-coder</strong></a>
+      <br /><sub>CTF Operator</sub>
+      <br /><br /><a href="https://ctftime.org/user/263324/"><sub>CTFtime ↗</sub></a>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+<p align="center">
+  <sub>Source snapshot: 19 Oct 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
+</p>
+
+<!-- CTFTIME:END -->
 
 ## ◈ Where curiosity takes us
 

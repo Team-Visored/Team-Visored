@@ -14,6 +14,10 @@ def snapshot():
         "synced_at": "2026-10-19T12:00:00+00:00",
         "ranking": {"country_place": 4, "world_place": 356, "rating_points": 191.6797128},
         "summary": {}, "upcoming": [],
+        "members": [
+            {"id": 10, "name": "Operator One", "role": "CTF Operator", "specialization": []},
+            {"id": 20, "name": "Operator Two", "specialization": ["Web Security"], "avatar_img": "https://ctftime.org/media/user.png", "portfolio_url": "https://example.com/"},
+        ],
         "results": [
             {"event_id": i, "title": f"CTF {i}", "place": place, "points": str(100 * i), "rating_points": 2.5}
             for i, place in enumerate([52, 18, 4, 21, 38, 63], 1)
@@ -99,6 +103,88 @@ class ProfileUpdaterTests(unittest.TestCase):
         response = io.StringIO(json.dumps(payload))
         with patch.object(profile, "urlopen", side_effect=[OSError("offline"), response]):
             self.assertEqual(profile.fetch_snapshot()["team"]["id"], 447690)
+
+    def test_members_join_leave_rename_and_profile_changes_update_automatically(self):
+        payload = snapshot()
+        first = profile.render(payload)
+        self.assertIn("Operator One", first)
+        self.assertIn('alt="MEMBERS: 2"', first)
+        payload["members"] = [
+            {"id": 20, "name": "Renamed Operator", "specialization": ["Forensics"], "avatar_img": "https://ctftime.org/media/new.png", "portfolio_url": "https://new.example/"},
+            {"id": 30, "name": "New Operator", "specialization": []},
+            {"id": 40, "name": "Another Operator", "specialization": []},
+        ]
+        updated = profile.render(payload)
+        self.assertNotIn("Operator One", updated)
+        self.assertNotIn("Operator Two", updated)
+        self.assertIn("Renamed Operator", updated)
+        self.assertIn("New Operator", updated)
+        self.assertIn("Forensics", updated)
+        self.assertIn("https://ctftime.org/media/new.png", updated)
+        self.assertIn("https://new.example/", updated)
+        self.assertIn('alt="MEMBERS: 3"', updated)
+
+    def test_duplicate_members_use_fresh_profile_and_sort_stably(self):
+        payload = snapshot()
+        payload["members"] += [
+            {"id": 20, "name": "Old stale name", "_stale": True},
+            {"id": 30, "name": "Previously stale", "_stale": True},
+            {"id": 30, "name": "Fresh profile", "_stale": False},
+        ]
+        members = profile.team_members(payload)
+        self.assertEqual([member["id"] for member in members], [30, 10, 20])
+        self.assertNotIn("Old stale name", profile.render(payload))
+        self.assertIn('alt="MEMBERS: 3"', profile.render(payload))
+
+    def test_invalid_or_missing_roster_preserves_saved_readme(self):
+        for members in (None, "unavailable", [{"id": 20}], [{"id": "invalid", "name": "Name"}]):
+            with self.subTest(members=members), tempfile.TemporaryDirectory() as folder:
+                path = Path(folder) / "README.md"
+                original = f"{profile.START}\nSaved members\n{profile.END}"
+                path.write_text(original)
+                payload = snapshot()
+                payload["members"] = members
+                with self.assertRaises(ValueError):
+                    profile.update_readme(path, payload)
+                self.assertEqual(path.read_text(), original)
+
+    def test_empty_roster_and_missing_member_fields_have_honest_fallbacks(self):
+        payload = snapshot()
+        output = profile.render(payload)
+        self.assertIn("assets/team-logo.png", output)
+        self.assertIn("https://ctftime.org/user/10/", output)
+        payload["members"] = []
+        output = profile.render(payload)
+        self.assertIn('alt="MEMBERS: 0"', output)
+        self.assertIn("No public members", output)
+
+    def test_member_content_and_links_cannot_inject_markup(self):
+        payload = snapshot()
+        payload["members"] = [{
+            "id": 30, "name": '<img src=x onerror="alert(1)">',
+            "specialization": ["<script>bad</script>", "Web | Crypto"],
+            "avatar_img": 'javascript:alert(1)', "portfolio_url": 'javascript:alert(1)',
+            "url": "https://evil.example/", "_stale": True,
+        }]
+        output = profile.render(payload)
+        self.assertNotIn("<script>", output)
+        self.assertNotIn("javascript:", output)
+        self.assertNotIn("https://evil.example/", output)
+        self.assertIn("https://ctftime.org/user/30/", output)
+        self.assertIn("Profile refresh pending", output)
+        self.assertIn("&#124;", output)
+        self.assertEqual(profile.public_url("assets/portrait.jpg", image=True), "https://team-visored.vercel.app/assets/portrait.jpg")
+        self.assertIsNone(profile.public_url("https://user:password@example.com/"))
+
+    def test_all_displayed_stats_follow_the_snapshot(self):
+        payload = snapshot()
+        payload.update(season=2027, upcoming=[{"event_id": 901}, {"event_id": 902}])
+        payload["ranking"] = {"country_place": 2, "world_place": 100, "rating_points": 250.5}
+        payload["results"] = [{"event_id": 99, "title": "New season", "place": 1, "points": 1000, "rating_points": 12.25}]
+        output = profile.render(payload)
+        for label in ["NEPAL: #2", "WORLDWIDE: #100", "SEASON: 2027", "BEST FINISH: #1", "CTF FINISHES: 1", "RATING: 250.500", "PLANNED EVENTS: 2", "MEMBERS: 2"]:
+            self.assertIn(f'alt="{label}"', output)
+        self.assertIn("1,000.00 | 12.250", output)
 
 
 if __name__ == "__main__":
