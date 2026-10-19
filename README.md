@@ -38,40 +38,36 @@ We follow the weird request, the loose permission, and the line of code that doe
 
 ## ◈ On the scoreboard
 
+<!-- CTFTIME:START -->
+
 <p align="center">
-  <a href="https://ctftime.org/team/447690">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&amp;query=%24.ranking.country_place&amp;prefix=%23&amp;label=NEPAL&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge&amp;cacheSeconds=300" alt="National rank in Nepal" />
-  </a>
-  <a href="https://ctftime.org/team/447690">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&amp;query=%24.ranking.world_place&amp;prefix=%23&amp;label=WORLDWIDE&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge&amp;cacheSeconds=300" alt="Worldwide rank" />
-  </a>
-  <a href="https://team-visored.vercel.app/achievements.html">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&amp;query=%24.season&amp;label=SEASON&amp;color=38BDF8&amp;labelColor=0D1117&amp;style=for-the-badge&amp;cacheSeconds=300" alt="Current season" />
-  </a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=NEPAL&amp;message=%234&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="NEPAL: #4" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23356&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #356" /></a>
+  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=SEASON&amp;message=2026&amp;color=38BDF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="SEASON: 2026" /></a>
 </p>
 
 <p align="center">
-  <a href="https://team-visored.vercel.app/achievements.html">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&amp;query=%24.summary.best_rank&amp;prefix=%23&amp;label=BEST%20FINISH&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge&amp;cacheSeconds=300" alt="Best recorded finish" />
-  </a>
-  <a href="https://team-visored.vercel.app/achievements.html">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&amp;query=%24.summary.total_finishes&amp;label=CTF%20FINISHES&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge&amp;cacheSeconds=300" alt="Recorded CTF finishes" />
-  </a>
-</p>
-
-<p align="center">
-  <sub>Rankings and results follow our website’s automatically synchronized CTFtime feed.</sub>
+  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=BEST+FINISH&amp;message=%234&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="BEST FINISH: #4" /></a>
+  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=17&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 17" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=191.680&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 191.680" /></a>
+  <a href="https://team-visored.vercel.app/upcoming.html"><img src="https://img.shields.io/static/v1?label=PLANNED+EVENTS&amp;message=9&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="PLANNED EVENTS: 9" /></a>
 </p>
 
 ### Five strongest finishes
 
-| Record | Event | Global finish |
-|:------:|:------|:-------------:|
-| **01** | ![First event][event-1] | ![First placement][place-1] |
-| **02** | ![Second event][event-2] | ![Second placement][place-2] |
-| **03** | ![Third event][event-3] | ![Third placement][place-3] |
-| **04** | ![Fourth event][event-4] | ![Fourth placement][place-4] |
-| **05** | ![Fifth event][event-5] | ![Fifth placement][place-5] |
+| Record | Event | Global finish | CTF score | Rating points |
+|:------:|:------|:-------------:|----------:|--------------:|
+| **01** | [GaianSpace CTF 2026](https://ctftime.org/event/3354/) | **#4** | 9,131.00 | 0.000 |
+| **02** | [Hackअस्त्र](https://ctftime.org/event/3270/) | **#18** | 5,057.00 | 15.411 |
+| **03** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.028 |
+| **04** | [kBxAc CTF 2026](https://ctftime.org/event/3456/) | **#38** | 9,871.00 | 11.541 |
+| **05** | [FortID CTF 2026](https://ctftime.org/event/3440/) | **#52** | 2,860.00 | 23.078 |
+
+<p align="center">
+  <sub>Source snapshot: 19 Oct 2026 (UTC). Rankings and results synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
+</p>
+
+<!-- CTFTIME:END -->
 
 <p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><strong>Explore the full archive ↗</strong></a>
@@ -121,16 +117,3 @@ Have a challenge, a research idea, or a scrim in mind? Reach out.
 </p>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0D1117,50:312E81,100:38BDF8&amp;height=100&amp;section=footer" alt="" />
-
-<!-- Automatically updated event titles and placements. -->
-
-[event-1]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B0%5D.title&label=CTF&color=0D1117&labelColor=312E81&style=flat-square&cacheSeconds=300
-[place-1]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B0%5D.place&prefix=%23&label=RANK&color=A8C8FF&labelColor=0D1117&style=flat-square&cacheSeconds=300
-[event-2]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B1%5D.title&label=CTF&color=0D1117&labelColor=312E81&style=flat-square&cacheSeconds=300
-[place-2]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B1%5D.place&prefix=%23&label=RANK&color=A8C8FF&labelColor=0D1117&style=flat-square&cacheSeconds=300
-[event-3]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B2%5D.title&label=CTF&color=0D1117&labelColor=312E81&style=flat-square&cacheSeconds=300
-[place-3]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B2%5D.place&prefix=%23&label=RANK&color=A8C8FF&labelColor=0D1117&style=flat-square&cacheSeconds=300
-[event-4]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B3%5D.title&label=CTF&color=0D1117&labelColor=312E81&style=flat-square&cacheSeconds=300
-[place-4]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B3%5D.place&prefix=%23&label=RANK&color=A8C8FF&labelColor=0D1117&style=flat-square&cacheSeconds=300
-[event-5]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B4%5D.title&label=CTF&color=0D1117&labelColor=312E81&style=flat-square&cacheSeconds=300
-[place-5]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fteam-visored.vercel.app%2Fdata%2Fctftime.json&query=%24.results%5B4%5D.place&prefix=%23&label=RANK&color=A8C8FF&labelColor=0D1117&style=flat-square&cacheSeconds=300

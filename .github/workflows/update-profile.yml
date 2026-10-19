@@ -1,0 +1,55 @@
+name: Update CTFtime profile
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - README.md
+      - scripts/update_profile.py
+      - tests/test_update_profile.py
+      - .github/workflows/update-profile.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ctftime-profile
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the profile repository
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Verify the updater
+        run: python -m unittest discover -s tests -p 'test_update_profile.py' -v
+
+      - name: Refresh from the website's CTFtime feed
+        run: python scripts/update_profile.py
+
+      - name: Publish changes when stats differ
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "No profile changes to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: refresh CTFtime profile [skip ci]"
+          git pull --rebase
+          git push
