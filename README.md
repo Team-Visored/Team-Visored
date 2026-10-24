@@ -63,7 +63,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 |:------:|:------|:-------------:|----------:|--------------:|
 | **01** | [GaianSpace CTF 2026](https://ctftime.org/event/3354/) | **#4** | 9,131.00 | 31.250 |
 | **02** | [Hackअस्त्र](https://ctftime.org/event/3270/) | **#18** | 5,057.00 | 15.411 |
-| **03** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.028 |
+| **03** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.415 |
 | **04** | [kBxAc CTF 2026](https://ctftime.org/event/3456/) | **#38** | 9,871.00 | 11.541 |
 | **05** | [FortID CTF 2026](https://ctftime.org/event/3440/) | **#52** | 2,860.00 | 23.078 |
 
