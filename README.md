@@ -53,7 +53,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 </p>
 
 <p align="center">
-  <a href="https://team-visored.vercel.app/upcoming.html"><img src="https://img.shields.io/static/v1?label=PLANNED+EVENTS&amp;message=9&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="PLANNED EVENTS: 9" /></a>
+  <a href="https://team-visored.vercel.app/upcoming.html"><img src="https://img.shields.io/static/v1?label=PLANNED+EVENTS&amp;message=8&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="PLANNED EVENTS: 8" /></a>
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=MEMBERS&amp;message=7&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="MEMBERS: 7" /></a>
 </p>
 
