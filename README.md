@@ -62,7 +62,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 | Record | Event | Global finish | CTF score | Rating points |
 |:------:|:------|:-------------:|----------:|--------------:|
 | **01** | [GaianSpace CTF 2026](https://ctftime.org/event/3354/) | **#4** | 9,131.00 | 31.250 |
-| **02** | [RSTCON 2026 CTF](https://ctftime.org/event/3377/) | **#17** | 330.00 | 0.000 |
+| **02** | [RSTCON 2026 CTF](https://ctftime.org/event/3377/) | **#17** | 330.00 | 3.586 |
 | **03** | [Hackअस्त्र](https://ctftime.org/event/3270/) | **#18** | 5,057.00 | 15.411 |
 | **04** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.415 |
 | **05** | [kBxAc CTF 2026](https://ctftime.org/event/3456/) | **#38** | 9,871.00 | 11.541 |
