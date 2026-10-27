@@ -48,7 +48,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 
 <p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=BEST+FINISH&amp;message=%234&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="BEST FINISH: #4" /></a>
-  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=18&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 18" /></a>
+  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=19&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 19" /></a>
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=219.205&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 219.205" /></a>
 </p>
 
@@ -127,6 +127,8 @@ We follow the weird request, the loose permission, and the line of code that doe
 <p align="center">
   <sub>Source snapshot: 27 Oct 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
 </p>
+
+<p align="center"><sub>Some source data is temporarily unavailable; the feed retains its last available records.</sub></p>
 
 <!-- CTFTIME:END -->
 
