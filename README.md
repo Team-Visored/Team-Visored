@@ -128,8 +128,6 @@ We follow the weird request, the loose permission, and the line of code that doe
   <sub>Source snapshot: 28 Oct 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
 </p>
 
-<p align="center"><sub>Some source data is temporarily unavailable; the feed retains its last available records.</sub></p>
-
 <!-- CTFTIME:END -->
 
 ## ◈ Where curiosity takes us
