@@ -48,7 +48,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 
 <p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=BEST+FINISH&amp;message=%234&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="BEST FINISH: #4" /></a>
-  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=19&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 19" /></a>
+  <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=20&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 20" /></a>
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=264.996&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 264.996" /></a>
 </p>
 
@@ -62,10 +62,10 @@ We follow the weird request, the loose permission, and the line of code that doe
 | Record | Event | Global finish | CTF score | Rating points |
 |:------:|:------|:-------------:|----------:|--------------:|
 | **01** | [GaianSpace CTF 2026](https://ctftime.org/event/3354/) | **#4** | 9,131.00 | 31.250 |
-| **02** | [RSTCON 2026 CTF](https://ctftime.org/event/3377/) | **#17** | 330.00 | 3.586 |
-| **03** | [Hackअस्त्र](https://ctftime.org/event/3270/) | **#18** | 5,057.00 | 15.411 |
-| **04** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.415 |
-| **05** | [kBxAc CTF 2026](https://ctftime.org/event/3456/) | **#38** | 9,871.00 | 11.541 |
+| **02** | [cruXipher 2026 - ATMoS &#x27;26, BITS Hyderabad](https://ctftime.org/event/3369/) | **#4** | 2,436.00 | 0.000 |
+| **03** | [RSTCON 2026 CTF](https://ctftime.org/event/3377/) | **#17** | 330.00 | 3.586 |
+| **04** | [Hackअस्त्र](https://ctftime.org/event/3270/) | **#18** | 5,057.00 | 15.411 |
+| **05** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.415 |
 
 <p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><strong>Explore the full archive ↗</strong></a>
@@ -127,6 +127,8 @@ We follow the weird request, the loose permission, and the line of code that doe
 <p align="center">
   <sub>Source snapshot: 29 Oct 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
 </p>
+
+<p align="center"><sub>Some source data is temporarily unavailable; the feed retains its last available records.</sub></p>
 
 <!-- CTFTIME:END -->
 
