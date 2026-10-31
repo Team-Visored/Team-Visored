@@ -53,7 +53,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 </p>
 
 <p align="center">
-  <a href="https://team-visored.vercel.app/upcoming.html"><img src="https://img.shields.io/static/v1?label=PLANNED+EVENTS&amp;message=4&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="PLANNED EVENTS: 4" /></a>
+  <a href="https://team-visored.vercel.app/upcoming.html"><img src="https://img.shields.io/static/v1?label=PLANNED+EVENTS&amp;message=5&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="PLANNED EVENTS: 5" /></a>
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=MEMBERS&amp;message=7&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="MEMBERS: 7" /></a>
 </p>
 
@@ -127,6 +127,8 @@ We follow the weird request, the loose permission, and the line of code that doe
 <p align="center">
   <sub>Source snapshot: 31 Oct 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
 </p>
+
+<p align="center"><sub>Some source data is temporarily unavailable; the feed retains its last available records.</sub></p>
 
 <!-- CTFTIME:END -->
 
