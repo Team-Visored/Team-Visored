@@ -42,14 +42,14 @@ We follow the weird request, the loose permission, and the line of code that doe
 
 <p align="center">
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=NEPAL&amp;message=%233&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="NEPAL: #3" /></a>
-  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23231&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #231" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23199&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #199" /></a>
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=SEASON&amp;message=2026&amp;color=38BDF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="SEASON: 2026" /></a>
 </p>
 
 <p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=BEST+FINISH&amp;message=%234&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="BEST FINISH: #4" /></a>
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=20&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 20" /></a>
-  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=264.996&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 264.996" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=289.149&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 289.149" /></a>
 </p>
 
 <p align="center">
@@ -62,7 +62,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 | Record | Event | Global finish | CTF score | Rating points |
 |:------:|:------|:-------------:|----------:|--------------:|
 | **01** | [GaianSpace CTF 2026](https://ctftime.org/event/3354/) | **#4** | 9,131.00 | 31.250 |
-| **02** | [cruXipher 2026 - ATMoS &#x27;26, BITS Hyderabad](https://ctftime.org/event/3369/) | **#4** | 2,436.00 | 0.000 |
+| **02** | [cruXipher 2026 - ATMoS &#x27;26, BITS Hyderabad](https://ctftime.org/event/3369/) | **#4** | 2,436.00 | 31.038 |
 | **03** | [RSTCON 2026 CTF](https://ctftime.org/event/3377/) | **#17** | 330.00 | 3.586 |
 | **04** | [Hackअस्त्र](https://ctftime.org/event/3270/) | **#18** | 5,057.00 | 15.411 |
 | **05** | [CSS CTF 2026: Return of Nexus](https://ctftime.org/event/3434/) | **#21** | 2,066.00 | 25.415 |
