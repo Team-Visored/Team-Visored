@@ -125,7 +125,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 </table>
 
 <p align="center">
-  <sub>Source snapshot: 06 Nov 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
+  <sub>Source snapshot: 07 Nov 2026 (UTC). Rankings, results, and members synchronize from CTFtime; checks are scheduled every 15 minutes.</sub>
 </p>
 
 <!-- CTFTIME:END -->
