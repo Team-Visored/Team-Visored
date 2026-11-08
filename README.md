@@ -42,14 +42,14 @@ We follow the weird request, the loose permission, and the line of code that doe
 
 <p align="center">
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=NEPAL&amp;message=%233&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="NEPAL: #3" /></a>
-  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23201&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #201" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23193&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #193" /></a>
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=SEASON&amp;message=2026&amp;color=38BDF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="SEASON: 2026" /></a>
 </p>
 
 <p align="center">
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=BEST+FINISH&amp;message=%234&amp;color=C4B5FD&amp;labelColor=0D1117&amp;style=for-the-badge" alt="BEST FINISH: #4" /></a>
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=CTF+FINISHES&amp;message=22&amp;color=67E8F9&amp;labelColor=0D1117&amp;style=for-the-badge" alt="CTF FINISHES: 22" /></a>
-  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=289.149&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 289.149" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=RATING&amp;message=296.087&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="RATING: 296.087" /></a>
 </p>
 
 <p align="center">
