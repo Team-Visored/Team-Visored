@@ -42,7 +42,7 @@ We follow the weird request, the loose permission, and the line of code that doe
 
 <p align="center">
   <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=NEPAL&amp;message=%233&amp;color=A8C8FF&amp;labelColor=0D1117&amp;style=for-the-badge" alt="NEPAL: #3" /></a>
-  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23198&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #198" /></a>
+  <a href="https://ctftime.org/team/447690"><img src="https://img.shields.io/static/v1?label=WORLDWIDE&amp;message=%23199&amp;color=818CF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="WORLDWIDE: #199" /></a>
   <a href="https://team-visored.vercel.app/achievements.html"><img src="https://img.shields.io/static/v1?label=SEASON&amp;message=2026&amp;color=38BDF8&amp;labelColor=0D1117&amp;style=for-the-badge" alt="SEASON: 2026" /></a>
 </p>
 
